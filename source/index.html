@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Ben's Burgers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="page-body">
+
+    <header class="page-header">
+      <div class="page-header__logo-wrap">
+        <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.png, img/logo-desktop@2x.png 2x">
+            <img class="page-header__logo-image" src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png 2x" alt="Логотип ресторана">
+          </picture>
+        </a>
+      </div>
+      <nav class="main-nav  main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a>Меню</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Комбо</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Акции</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Адреса</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="page-header__link">Русский</a>
+    </header>
+
+    <main class="page-main">
+
+    <section class="promo">
+      <div class="promo__wrapper">
+        <p class="promo__description">хит сезона</p>
+        <h1 class="promo__title">Big Ben</h1>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/big-ben-desktop.jpg, img/big-ben-desktop@2x.jpg 2x">
+          <source media="(min-width: 720px)" srcset="img/big-ben-tablet.jpg.jpg, img/big-ben-tablet@2x.jpg 2x">
+          <img class="page-header__logo-image" src="img/big-ben-mobile.jpg" srcset="img/big-ben-mobile@2x.jpg 2x" alt="Логотип ресторана">
+        </picture>
+        <div class="promo__container">
+          <ul class="promo__list">
+            <li class="promo__item">Сочная котлета из 100% говядины с нашей фермы </li>
+            <li class="promo__item">Нежнейший соус по оригинальному рецепту</li>
+            <li class="promo__item">Мягкая диетическая булочка с кунжутом </li>
+            <li class="promo__item">Свежие салатные листья прямо с грядки</li>
+            <li class="promo__item">Лук, огурчики и ничего лишнего!</li>
+          </ul>
+        </div>
+      </div>
+      <p class="promo__price">149 руб.</p>
+      <button class="promo__button" type="button">Изменить ингредиенты</button>
+      <a class="promo__link" href="form.html">Купить</a>
+    </section>
+
+      <section class="menu">
+        <ul class="menu__list">
+          <h3 class="menu__title">Big Ben Комбо</h3>
+          <li class="menu__item">
+            <p>1</p>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/combo-first-desktop.jpg, img/combo-first-desktop@2x.jpg 2x">
+              <source media="(min-width: 720px)" srcset="img/combo-first-tablet.jpg.jpg, img/combo-first-tablet@2x.jpg 2x">
+              <img class="menu__img" src="img/combo-first-mobile.jpg" srcset="img/combo-first-mobile@2x.jpg 2x" alt="Big Ben Комбо">
+            </picture>
+            <p class="menu__subtitle">Двойной Биг Бен, Картофель фри (бол.), напиток на выбор (0,5)</p>
+            <p class="menu__price">199 руб.</p>
+            <a class="menu__link" href="form.html">Купить</a>
+          </li>
+          <li class="menu__item">
+            <p>2</p>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/combo-second-desktop.jpg, img/combo-second-desktop@2x.jpg 2x">
+              <source media="(min-width: 720px)" srcset="img/combo-second-tablet.jpg.jpg, img/combo-second-tablet@2x.jpg 2x">
+              <img class="menu__img" src="img/combo-second-mobile.jpg" srcset="img/combo-second-mobile@2x.jpg 2x" alt="Big Ben Комбо">
+            </picture>
+            <p class="menu__subtitle">Два двойных Биг Бена, два картофеля фри (бол.), наггетсы (бол.), соус, два напитка на выбор (0,5)</p>
+            <p class="menu__price">399 руб.</p>
+            <a class="menu__link" href="form.html">Купить</a>
+          </li>
+          <li class="menu__item">
+            <p>3</p>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/combo-third-desktop.jpg, img/combo-third-desktop@2x.jpg 2x">
+              <source media="(min-width: 720px)" srcset="img/combo-third-tablet.jpg.jpg, img/combo-third-tablet@2x.jpg 2x">
+              <img class="menu__img" src="img/combo-third-mobile.jpg" srcset="img/combo-third-mobile@2x.jpg 2x" alt="Big Ben Комбо">
+            </picture>
+            <p class="menu__subtitle">Два двойных Биг Бена, два чизбургера, Два картофеля фри (бол.), два напитка на выбор (0,5)</p>
+            <p class="menu__price">499 руб.</p>
+            <a class="menu__link" href="form.html">Купить</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="stocks">
+        <h3 class="stocks__title">Акции</h3>
+        <p class="stocks__description">Купи 3 Биг Бена и получи кофе в подарок!</p>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/stocks-desktop.jpg, img/stocks-desktop@2x.jpg 2x">
+          <source media="(min-width: 720px)" srcset="img/stocks-tablet.jpg.jpg, img/stocks-tablet@2x.jpg 2x">
+          <img class="stocks__img" src="img/stocks-mobile.jpg" srcset="img/stocks-mobile@2x.jpg 2x" alt="три Big Ben плюс кофе">
+        </picture>
+        <p class="stocks__description">Скидки при покупке Биг Бена:</p>
+        <ul class="stocks__list">
+          <li class="stocks__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/coffee-desktop.jpg, img/coffee-desktop@2x.jpg 2x">
+              <source media="(min-width: 720px)" srcset="img/coffee-tablet.jpg.jpg, img/coffee-tablet@2x.jpg 2x">
+              <img class="stocks__img" src="img/coffee-mobile.jpg" srcset="img/coffee-mobile@2x.jpg 2x" alt="кофе">
+            </picture>
+            <h4>Кофе 0,4</h4>
+            <p class="stocks__item-old-price">109 руб.</p>
+            <p class="stocks__item-new-price">79 руб.</p>
+            <a href="">Купить</a>
+          </li>
+          <li class="stocks__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/potato-desktop.jpg, img/potato-desktop@2x.jpg 2x">
+              <source media="(min-width: 720px)" srcset="img/potato-tablet.jpg.jpg, img/potato-tablet@2x.jpg 2x">
+              <img class="stocks__img" src="img/potato-mobile.jpg" srcset="img/potato-mobile@2x.jpg 2x" alt="большой картофель фри">
+            </picture>
+            <h4>Картофель фри (бол.)</h4>
+            <p class="stocks__item-old-price">89 руб.</p>
+            <p class="stocks__item-new-price">69 руб.</p>
+            <a href="">Купить</a>
+          </li>
+          <li class="stocks__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/nuggets-desktop.jpg, img/nuggets-desktop@2x.jpg 2x">
+              <source media="(min-width: 720px)" srcset="img/nuggets-tablet.jpg.jpg, img/nuggets-tablet@2x.jpg 2x">
+              <img class="stocks__img" src="img/nuggets-mobile.jpg" srcset="img/nuggets-mobile@2x.jpg 2x" alt="большие наггетсы">
+            </picture>
+            <h4>Наггетсы (бол.)</h4>
+            <p class="stocks__item-old-price">119 руб.</p>
+            <p class="stocks__item-new-price">99 руб.</p>
+            <a href="">Купить</a>
+          </li>
+          <li class="stocks__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/muffin-desktop.jpg, img/muffin-desktop@2x.jpg 2x">
+              <source media="(min-width: 720px)" srcset="img/muffin-tablet.jpg.jpg, img/muffin-tablet@2x.jpg 2x">
+              <img class="stocks__img" src="img/muffin-mobile.jpg" srcset="img/muffin-mobile@2x.jpg 2x" alt="Маффин">
+            </picture>
+            <h4>Маффин</h4>
+            <p class="stocks__item-old-price">79 руб.</p>
+            <p class="stocks__item-new-price">59 руб.</p>
+            <a href="">Купить</a>
+          </li>
+        </ul>
+        <a href="">Посмотреть все акции</a>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+
+      <section class="contacts">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.6470757750667!2d37.614929115712094!3d55.764632780556546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a43b3c3fa9d%3A0xc92ce7301750de35!2z0J_QtdGC0YDQvtCy0LrQsCDRg9C7LiwgMjIsINCc0L7RgdC60LLQsCwgMTI3MDUx!5e0!3m2!1sru!2sru!4v1623499048797!5m2!1sru!2sru" width="100%" height="622" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+
+    </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
+  </body>
+</html>
