@@ -1,0 +1,98 @@
+.menu {
+  margin: 80px auto;
+  text-align: center;
+  border-top: 1px solid @yellow;
+  border-bottom: 1px solid @yellow;
+  width: 80%;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.menu__list::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/arrow-left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 37%;
+  left: -3%;
+  width: 16px;
+  height: 46px;
+}
+
+.menu__list::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/arrow-right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 37%;
+  left: 53%;
+  width: 16px;
+  height: 46px;
+}
+
+.menu__title {
+  font-family: "Rye", "Arial", "Helvetica", sans-serif;
+  color: @yellow;
+  font-size: 36px;
+  line-height: 45px;
+  width: 143px;
+  margin-left: 20px;
+}
+
+.menu__subtitle {
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: -26%;
+  margin-left: 54%;
+}
+
+.menu__number {
+  font-family: "Rye", "Arial", "Helvetica", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.menu__number::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/circle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 7%;
+  left: 40%;
+  width: 56px;
+  height: 50px;
+}
+
+.menu__description {
+  width: 194px;
+  margin: 0 auto;
+}
+
+.menu__price {
+  color: @yellow;
+}
+
+.menu__link {
+  margin: 5px auto;
+  display: block;
+  text-transform: uppercase;
+  border: 1px solid @white;
+  width: 205px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.menu__item-second,
+.menu__item-third {
+  display: none;
+}
