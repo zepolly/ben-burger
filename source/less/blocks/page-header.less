@@ -4,11 +4,22 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding: 50px 50px 0 105px;
+    padding: 50px 50px 0 50px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 50px 0 85px;
+    padding: 60px 60px 0 60px;
+    align-items: center;
+  }
+}
+
+.page-header__logo-image {
+  @media (min-width: @tablet-width) {
+    width: 180px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 290px;
   }
 }
 
@@ -19,28 +30,17 @@
 @media (min-width: @desktop-width) {
   .page-header__link {
     display: block;
-    padding: 12px 29px;
-    height: 22px;
-    background-color: @yellow;
-    color: @white;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    cursor: pointer;
-    position: relative;
-    top: 47%;
-    left: 0;
 
     &:focus {
-      background-color: @red;
+      color: @yellow;
     }
 
     &:hover {
-      background-color: @red;
+      color: @yellow;
     }
 
     &:active {
-      background-color: @red-dark;
+      color: @orange;
     }
   }
 }

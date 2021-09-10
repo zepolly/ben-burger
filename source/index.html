@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@400;700&family=Rye&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
 
   <body class="page-body">
@@ -50,35 +51,131 @@
 
     <main class="page-main">
 
-    <section class="promo">
-      <div class="promo__wrapper">
-        <p class="promo__description">хит сезона</p>
-        <h1 class="promo__title">Big Ben</h1>
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/big-ben-desktop.png, img/big-ben-desktop@2x.png 2x">
-          <source media="(min-width: 720px)" srcset="img/big-ben-tablet.png, img/big-ben-tablet@2x.png 2x">
-          <img class="promo__img" src="img/big-ben-mobile.png" srcset="img/big-ben-mobile@2x.png 2x" alt="Логотип ресторана">
-        </picture>
-        <div class="promo__container">
-          <ul class="promo__list">
-            <li class="promo__item promo__item-first">Сочная котлета из 100% говядины с нашей фермы </li>
-            <li class="promo__item promo__item-second">Мягкая диетическая булочка с кунжутом</li>
-            <li class="promo__item promo__item-third">Свежие салатные листья прямо с грядки</li>
-            <li class="promo__item promo__item-fourth">Нежнейший соус по оригинальному рецепту</li>
-            <li class="promo__item promo__item-fifth">Лук, огурчики<br>и&nbsp;ничего&nbsp;лишнего!</li>
-          </ul>
+      <section class="promo">
+        <div class="promo__wrapper">
+          <p class="promo__description">хит сезона</p>
+          <h1 class="promo__title">Big Ben</h1>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/big-ben-desktop.png, img/big-ben-desktop@2x.png 2x">
+            <source media="(min-width: 720px)" srcset="img/big-ben-tablet.png, img/big-ben-tablet@2x.png 2x">
+            <img class="promo__img" src="img/big-ben-mobile.png" srcset="img/big-ben-mobile@2x.png 2x" alt="Логотип ресторана">
+          </picture>
+          <div class="promo__container">
+            <ul class="promo__list">
+              <li class="promo__item promo__item-first">Сочная котлета из 100% говядины с нашей фермы </li>
+              <li class="promo__item promo__item-second">Мягкая диетическая булочка с кунжутом</li>
+              <li class="promo__item promo__item-third">Свежие салатные листья прямо с грядки</li>
+              <li class="promo__item promo__item-fourth">Нежнейший соус по оригинальному рецепту</li>
+              <li class="promo__item promo__item-fifth">Лук, огурчики<br>и&nbsp;ничего&nbsp;лишнего!</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <p class="promo__price">149 руб.</p>
-      <a class="promo__link" href="form.html">Купить</a>
-      <button class="promo__button" type="button">Изменить ингредиенты</button>
-    </section>
+        <p class="promo__price">149 руб.</p>
+        <a class="promo__link" href="form.html">Купить</a>
+        <button class="promo__button" type="button" id="change">Изменить ингредиенты</button>
+      </section>
+
+      <section class="ingredients visually-hidden" id="ingredients">
+        <div class="ingredients__wrapper">
+          <div>
+            <h2 class="ingredients__title">Big Ben</h2>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/big-ben-desktop.png, img/big-ben-desktop@2x.png 2x">
+              <source media="(min-width: 720px)" srcset="img/big-ben-tablet.png, img/big-ben-tablet@2x.png 2x">
+              <img class="ingredients__img" src="img/big-ben-mobile.png" srcset="img/big-ben-mobile@2x.png 2x" alt="Логотип ресторана">
+            </picture>
+          </div>
+          <div class="ingredients__description">
+            <p class="ingredients__description-object">Большой бургер с двумя рублеными бифштексами из 100% говядины на булочке с кунжутом, поджаренной в тостере, маринованными огурчиками, луком, свежим салатом «Айсберг», ломтиком плавленого сыра «Чеддер» и специальным соусом «Биг Бен».</p>
+            <p class="ingredients__cal">500 ккал</p>
+            <table class="ingredients__table">
+              <tr>
+                <th>Жиры</th>
+                <th>Углеводы</th>
+                <th>Сахар</th>
+                <th>Белки</th>
+                <th>Соль</th>
+              </tr>
+              <tr>
+                <td>27 г</td>
+                <td>42 г</td>
+                <td>8 г</td>
+                <td>27 г</td>
+                <td>2 г</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <form action="#" method="get" class="ingredients__form">
+          <fieldset class="ingredients__remove">
+            <legend class="visually-hidden">убрать ингредиенты</legend>
+            <ul class="ingredients__list">
+              <li class="ingredients__item">
+                <input class="visually-hidden ingredients__checkbox" type="checkbox" name="salad" id="salad" value="Убрать салат" checked>
+                <label for="salad">Убрать салат</label>
+              </li>
+              <li class="ingredients__item">
+                <input class="visually-hidden ingredients__checkbox" type="checkbox" name="cheese" id="cheese" value="Убрать сыр">
+                <label for="cheese">Убрать сыр</label>
+              </li>
+              <li class="ingredients__item">
+                <input class="visually-hidden ingredients__checkbox" type="checkbox" name="salt" id="salt" value="Убрать соль">
+                <label for="salt">Убрать соль</label>
+              </li>
+              <li class="ingredients__item">
+                <input class="visually-hidden ingredients__checkbox" type="checkbox" name="cutlet" id="cutlet" value="Убрать котлету">
+                <label for="cutlet">Убрать котлету</label>
+              </li>
+              <li class="ingredients__item">
+                <input class="visually-hidden ingredients__checkbox" type="checkbox" name="sauce" id="sauce" value="Убрать соус">
+                <label for="sauce">Убрать соус</label>
+              </li>
+              <li class="ingredients__item">
+                <input class="visually-hidden ingredients__checkbox" type="checkbox" name="onion" id="onion" value="Убрать лук">
+                <label for="onion">Убрать лук</label>
+              </li>
+              <li class="ingredients__item">
+                <input class="visually-hidden ingredients__checkbox" type="checkbox" name="cucumber" id="cucumber" value="Убрать огурчики">
+                <label for="cucumber">Убрать огурчики</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="ingredients__add">
+            <legend class="visually-hidden">добавить ингредиенты</legend>
+            <ul class="ingredients__list">
+              <li class="ingredients__item ingredients__item-add">
+                <input class="visually-hidden ingredients__checkbox-add" type="checkbox" name="cheese-add" id="cheese-add" value="Добавить сыр" checked>
+                <label for="cheese-add">Добавить сыр</label>
+              </li>
+              <li class="ingredients__item ingredients__item-add">
+                <input class="visually-hidden ingredients__checkbox-add" type="checkbox" name="sauce-add" id="sauce-add" value="Добавить соус">
+                <label for="sauce-add">Добавить соус</label>
+              </li>
+              <li class="ingredients__item ingredients__item-add">
+                <input class="visually-hidden ingredients__checkbox-add" type="checkbox" name="sauce-sharp" id="sauce-sharp" value="Добавить острый соус">
+                <label for="sauce-sharp">Добавить острый соус</label>
+              </li>
+              <li class="ingredients__item ingredients__item-add">
+                <input class="visually-hidden ingredients__checkbox-add" type="checkbox" name="cucumber-add" id="cucumber-add" value="Добавить огурчики">
+                <label for="cucumber-add">Добавить огурчики</label>
+              </li>
+            </ul>
+            <p class="ingredients__price">145 руб.</p>
+            <a href="#" class="ingredients__link">Купить</a>
+            <div class="ingredients__counter">
+              <span class="ingredients__minus">-</span>
+              <input class="ingredients__number" type="text" value="1" size="1">
+              <span class="ingredients__plus">+</span>
+            </div>
+          </fieldset>
+        </form>
+      </section>
 
       <section class="menu">
+        <h3 class="menu__title">Big Ben</h3>
+        <p class="menu__subtitle">Комбо</p>
         <ul class="menu__list">
-          <h3 class="menu__title">Big Ben</h3>
-          <p class="menu__subtitle">Комбо</p>
-          <li class="menu__item">
+          <li class="menu__item menu__item-first">
             <p class="menu__number">1</p>
             <picture>
               <source media="(min-width: 1200px)" srcset="img/combo-first-desktop.png, img/combo-first-desktop@2x.png 2x">
@@ -120,7 +217,7 @@
         <picture>
           <source media="(min-width: 1200px)" srcset="img/stocks-desktop.png, img/stocks-desktop@2x.png 2x">
           <source media="(min-width: 720px)" srcset="img/stocks-tablet.png, img/stocks-tablet@2x.png 2x">
-          <img class="stocks__img" src="img/stocks-mobile.png" srcset="img/stocks-mobile@2x.png 2x" alt="три Big Ben плюс кофе">
+          <img class="stocks__img-combo" src="img/stocks-mobile.png" srcset="img/stocks-mobile@2x.png 2x" alt="три Big Ben плюс кофе">
         </picture>
         <p class="stocks__description">Скидки при покупке Биг Бена:</p>
         <ul class="stocks__list">
@@ -131,9 +228,11 @@
               <img class="stocks__img" src="img/coffee-mobile.png" srcset="img/coffee-mobile@2x.png 2x" alt="кофе">
             </picture>
             <h4>Кофе 0,4</h4>
-            <p class="stocks__item-old-price">109 руб.</p>
-            <p class="stocks__item-new-price">79 руб.</p>
-            <a href="">Купить</a>
+            <div class="stocks__item-price">
+              <p class="stocks__item-old-price">109 руб.</p>
+              <p class="stocks__item-new-price">79 руб.</p>
+            </div>
+            <a class="stocks__link" href="">Купить</a>
           </li>
           <li class="stocks__item">
             <picture>
@@ -142,9 +241,11 @@
               <img class="stocks__img" src="img/potato-mobile.png" srcset="img/potato-mobile@2x.png 2x" alt="большой картофель фри">
             </picture>
             <h4>Картофель фри (бол.)</h4>
-            <p class="stocks__item-old-price">89 руб.</p>
-            <p class="stocks__item-new-price">69 руб.</p>
-            <a href="">Купить</a>
+            <div class="stocks__item-price">
+              <p class="stocks__item-old-price">89 руб.</p>
+              <p class="stocks__item-new-price">69 руб.</p>
+            </div>
+            <a class="stocks__link" href="">Купить</a>
           </li>
           <li class="stocks__item">
             <picture>
@@ -153,9 +254,11 @@
               <img class="stocks__img" src="img/nuggets-mobile.png" srcset="img/nuggets-mobile@2x.png 2x" alt="большие наггетсы">
             </picture>
             <h4>Наггетсы (бол.)</h4>
-            <p class="stocks__item-old-price">119 руб.</p>
-            <p class="stocks__item-new-price">99 руб.</p>
-            <a href="">Купить</a>
+            <div class="stocks__item-price">
+              <p class="stocks__item-old-price">119 руб.</p>
+              <p class="stocks__item-new-price">99 руб.</p>
+            </div>
+            <a class="stocks__link" href="">Купить</a>
           </li>
           <li class="stocks__item">
             <picture>
@@ -164,27 +267,31 @@
               <img class="stocks__img" src="img/muffin-mobile.png" srcset="img/muffin-mobile@2x.png 2x" alt="Маффин">
             </picture>
             <h4>Маффин</h4>
-            <p class="stocks__item-old-price">79 руб.</p>
-            <p class="stocks__item-new-price">59 руб.</p>
-            <a href="">Купить</a>
+            <div class="stocks__item-price">
+              <p class="stocks__item-old-price">79 руб.</p>
+              <p class="stocks__item-new-price">59 руб.</p>
+            </div>
+            <a class="stocks__link" href="">Купить</a>
           </li>
         </ul>
-        <a href="">Посмотреть все акции</a>
+        <a class="stocks__link-all" href="">Посмотреть все акции</a>
       </section>
 
     </main>
 
     <footer class="page-footer">
 
-      <section class="contacts">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.6470757750667!2d37.614929115712094!3d55.764632780556546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a43b3c3fa9d%3A0xc92ce7301750de35!2z0J_QtdGC0YDQvtCy0LrQsCDRg9C7LiwgMjIsINCc0L7RgdC60LLQsCwgMTI3MDUx!5e0!3m2!1sru!2sru!4v1623499048797!5m2!1sru!2sru" width="100%" height="622" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+      <section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.6470757750667!2d37.614929115712094!3d55.764632780556546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a43b3c3fa9d%3A0xc92ce7301750de35!2z0J_QtdGC0YDQvtCy0LrQsCDRg9C7LiwgMjIsINCc0L7RgdC60LLQsCwgMTI3MDUx!5e0!3m2!1sru!2sru!4v1623499048797!5m2!1sru!2sru" width="100%" height="350px" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
 
     </footer>
 
-    <script>
+    <script type="text/javascript">
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
+      var change = document.querySelector ('#change');
+      var ingredients = document.querySelector ('#ingredients');
 
       navMain.classList.remove('main-nav--nojs');
 
@@ -197,6 +304,32 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
+
+      change.onclick = function() {
+        if (ingredients.classList.contains('visually-hidden')){
+          ingredients.classList.remove('visually-hidden');
+          ingredients.classList.add('show' );
+        } else {
+          ingredients.classList.add('visually-hidden');
+          ingredients.classList.remove('show');
+        }};
+
+        $(document).ready(function() {
+          $('.ingredients__minus').click(function () {
+            var $input = $(this).parent().find('.ingredients__number');
+            var count = parseInt($input.val()) - 1;
+            count = count < 1 ? 1 : count;
+            $input.val(count);
+            $input.change();
+            return false;
+          });
+          $('.ingredients__plus').click(function () {
+            var $input = $(this).parent().find('.ingredients__number');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change();
+            return false;
+          });
+        });
     </script>
 
   </body>
